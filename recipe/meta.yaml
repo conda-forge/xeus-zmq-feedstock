@@ -10,7 +10,7 @@ source:
   sha256: f19b0b803d2414b44cf650fcd4d0cfecb82e51e7765fe22a7a8f6a899f0ae10c
 
 build:
-  number: 0
+  number: 1
   skip: true  # [win and vc<14]
   run_exports:
     - {{ pin_subpackage(name, max_pin='x.x') }}
@@ -23,7 +23,7 @@ requirements:
     - {{ compiler('cxx') }}
   host:
     - xtl >=0.7,<0.8
-    - nlohmann_json >=3.2.0,<3.10
+    - nlohmann_json <4
     - libuuid  # [linux]
     - cppzmq >=4.8.1,<5
     - zeromq
