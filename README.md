@@ -1,11 +1,11 @@
-About xeus-zmq
-==============
+About xeus-zmq-feedstock
+========================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/xeus-zmq-feedstock/blob/main/LICENSE.txt)
 
 Home: https://github.com/jupyter-xeus/xeus-zmq
 
 Package license: BSD-3-Clause
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/xeus-zmq-feedstock/blob/main/LICENSE.txt)
 
 Summary: ZeroMQ-based middleware for xeus
 
