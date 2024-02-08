@@ -1,5 +1,5 @@
 {% set name = "xeus-zmq" %}
-{% set version = "1.2.0" %}
+{% set version = "1.3.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/jupyter-xeus/xeus-zmq/archive/{{ version }}.tar.gz
-  sha256: ecde713e9c5d5bd28fdd61448a6ec41a74a7ae6b76a81b65b7a84f602dfd9244
+  sha256: 503987f17983f9c877edecf73ba884136eda419e48be82606c7d7670845effb3
 
 build:
   number: 0
@@ -28,7 +28,7 @@ requirements:
     - cppzmq >=4.8.1,<5
     - zeromq
     - openssl <4.0
-    - xeus >=3.0,<4.0
+    - xeus >=3.2,<4.0
   # zeromq, libuuid and xeus have run_exports sections. No need to add them as
   # run requirements. xeus headers expose headers from nlohmann_json and
   # xtl, but does not depend on them at runtime.
