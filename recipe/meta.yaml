@@ -10,7 +10,7 @@ source:
   sha256: 503987f17983f9c877edecf73ba884136eda419e48be82606c7d7670845effb3
 
 build:
-  number: 0
+  number: 1
   skip: true  # [win and vc<14]
   run_exports:
     - {{ pin_subpackage(name, max_pin='x.x') }}
@@ -34,7 +34,7 @@ requirements:
   # xtl, but does not depend on them at runtime.
   run_constrained:
     - {{ pin_compatible('xtl', max_pin='x.x') }}
-    - {{ pin_compatible('nlohmann_json', max_pin='x.x') }}
+    - {{ pin_compatible('nlohmann_json', max_pin='x.x.x') }}
     - {{ pin_compatible('cppzmq', max_pin='x.x') }}
 
 test:
