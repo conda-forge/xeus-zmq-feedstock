@@ -1,5 +1,7 @@
 #!/bin/bash
 
+export CXXFLAGS="${CXXFLAGS} -D_LIBCPP_DISABLE_AVAILABILITY=1"
+
 cmake ${CMAKE_ARGS}                  \
       -GNinja                        \
       -DCMAKE_BUILD_TYPE=Release     \
