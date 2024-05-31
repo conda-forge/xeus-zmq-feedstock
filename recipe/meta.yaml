@@ -10,7 +10,7 @@ source:
   sha256: e7bfef1418be323b22dee32a9eebc7f24140e63abe94df911414cc79f8142644
 
 build:
-  number: 0
+  number: 1
   skip: true  # [win and vc<14]
   run_exports:
     - {{ pin_subpackage(name, max_pin='x.x') }}
@@ -20,6 +20,7 @@ requirements:
     - cmake
     - ninja
     - pkg-config  # [unix]
+    - {{ stdlib('c') }}
     - {{ compiler('cxx') }}
   host:
     - nlohmann_json
