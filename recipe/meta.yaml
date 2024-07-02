@@ -1,5 +1,5 @@
 {% set name = "xeus-zmq" %}
-{% set version = "3.0.0" %}
+{% set version = "3.1.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,10 +7,10 @@ package:
 
 source:
   url: https://github.com/jupyter-xeus/xeus-zmq/archive/{{ version }}.tar.gz
-  sha256: e7bfef1418be323b22dee32a9eebc7f24140e63abe94df911414cc79f8142644
+  sha256: 55ebfca641e2295dbc0d6c85dbfb54810762bc0792d3e464d32f79a5ce0bdd26
 
 build:
-  number: 1
+  number: 0
   skip: true  # [win and vc<14]
   run_exports:
     - {{ pin_subpackage(name, max_pin='x.x') }}
@@ -61,3 +61,4 @@ extra:
     - SylvainCorlay
     - JohanMabille
     - martinRenou
+    - anutosh491
