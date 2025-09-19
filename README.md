@@ -11,7 +11,7 @@ Summary: ZeroMQ-based middleware for xeus
 
 Development: https://github.com/jupyter-xeus/xeus-zmq
 
-Documentation: https://xeus.readthedocs.io
+Documentation: https://xeus.readthedocs.io/
 
 ZeroMQ-based middleware for xeus
 
