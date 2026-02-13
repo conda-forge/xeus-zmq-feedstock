@@ -1,5 +1,5 @@
 context:
-  version: "3.1.1"
+  version: "3.1.2"
   build_number: 0
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://github.com/jupyter-xeus/xeus-zmq/archive/${{ version }}.tar.gz
-  sha256: 2b44988ad4f6d3e44b4000cf540ce6fdab29bf112f586107ad91dc4e4f2748ff
+  sha256: 9e81f6d8c259aca4a72a5bacac08f3cf8a4f0b8fee912fca2ef5d830a66c83ac
 
 build:
   number: ${{ build_number }}
