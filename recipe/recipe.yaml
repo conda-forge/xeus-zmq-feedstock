@@ -1,5 +1,5 @@
 context:
-  version: "3.1.2"
+  version: "4.0.0"
   build_number: 0
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://github.com/jupyter-xeus/xeus-zmq/archive/${{ version }}.tar.gz
-  sha256: 9e81f6d8c259aca4a72a5bacac08f3cf8a4f0b8fee912fca2ef5d830a66c83ac
+  sha256: 6a87c0edeefae1350743071cd78c825d6ab21e771b52610ef7e41c434af20db6
 
 build:
   number: ${{ build_number }}
@@ -30,15 +30,14 @@ requirements:
     - cppzmq >=4.8.1,<5
     - zeromq
     - openssl <4.0
-    - xeus >=5,<6.0
+    - xeus >=6,<7.0
     - if: linux
       then:
         - libuuid
   # zeromq, libuuid and xeus have run_exports sections. No need to add them as
-  # run requirements. xeus headers expose headers from nlohmann_json 
-  # but does not depend on them at runtime.
-  run_constraints:
-    - ${{ pin_compatible('cppzmq', upper_bound='x.x') }}
+  # run requirements. nlohmann_json-abi has run_exports section to ensure headers
+  # of nlohmann_json used at build time will be the same as those used at
+  # runtime.
 
 tests:
   - package_contents:
